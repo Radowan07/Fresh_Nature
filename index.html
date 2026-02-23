@@ -23,32 +23,36 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+  <!-- for custom animation -->
+  <style>
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+
 </head>
 
-<body>
+<body class="font-sora">
 
   <header>
-    <nav>
-      <div class="navbar bg-base-100 shadow-sm">
-     
-        <div class="navbar-start">
-            <img src="c2-assets/logo-header.png" alt="">
-          <div class="dropdown dropdown-end lg:hidden">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <li><a>Product</a></li>
-              <li>
-                <a>Services</a>
+    <nav class=" md:container md:mx-auto ">
+      <div class="navbar  bg-base-100  broder border-b-2 border-[#179800] lg:border-b-0 ">
 
-              </li>
-              <li><a>Contact us</a></li>
-            </ul>
-          </div>
+        <div class="navbar-start">
+          <img src="c2-assets/logo-header.png" alt="">
+
           <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
         </div>
         <div class="navbar-center hidden lg:flex">
@@ -63,12 +67,85 @@
           <a class="btn bg-[#179800] text-white hidden lg:inline-flex">Register</a>
 
         </div>
+
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <li><a>Product</a></li>
+            <li>
+              <a>Services</a>
+
+            </li>
+            <li><a>Contact us</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
+
+    <!-- banner section -->
+    <div class="mt-18">
+      <h2 class="text-[3.5rem] font-medium text-center ">Freshness <span class="text-[#179800]">You Can</span><br>
+        <span class="text-[#179800]">Count</span>On, Prices You’ll Love!
+      </h2>
+      <p class="text-[20px] font-light text-center text-[#111111]">Your daily essentials at unbeatable prices. From
+        fresh produce to pantry<br>staples, we’ve got you covered every day!</p>
+
+      <div class="mt-15  max-w-full mx-auto bg-linear-to-b/decreasing from-white-1000 to-[#EFEBE3] rounded-lg">
+        <img class="items-center  mx-auto animate-float " src="c2-assets/hero-vegetables.png" alt="">
+      </div>
+    </div>
+
   </header>
 
   <main>
+    <!-- card section -->
+    <div class="md:container md:mx-auto">
+      <h2 class="text-4xl font-semibold text-start mt-30 text-[#179800]">Services</h2>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-items-center mt-10">
+        <div class="card bg-base-100 w-96 shadow-sm bg-[#EFEBE3]">
+          <figure class="px-10 pt-10">
+            <img src="c2-assets/service.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-2xl font-semibold">24/7 Services </h2>
+            <p class="font-light text-xl text-[#111111]">We provide reliable 24-hour service.
+              Always available whenever you need us.
+              Day or night, we’re here for you.s</p>
+
+          </div>
+        </div>
+        <div class="card bg-base-100 w-96 shadow-sm bg-[#EFEBE3]">
+          <figure class="px-10 pt-10">
+            <img src="c2-assets/delivery.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-2xl font-semibold">Fast Delivery</h2>
+            <p class="font-light text-xl text-[#111111]">Fast and reliable 24-hour delivery service.
+              Your order reaches you right on time.
+              Because your time matters to us.</p>
+
+          </div>
+        </div>
+        <div class="card bg-base-100 w-96 shadow-sm bg-[#EFEBE3]">
+          <figure class="px-10 pt-10">
+            <img src="c2-assets/healthy.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-2xl font-semibold">Healthy Products </h2>
+            <p class="font-light text-xl text-[#111111]">Healthy choices, happy life!
+              Nourishing your body with every bite.
+              Pure, natural, and full of goodness.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
